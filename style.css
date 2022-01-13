@@ -1,0 +1,35 @@
+
+body {
+	margin: 0;
+	background: #eee;
+}
+
+.header {
+	padding: 1px;
+	background: black;
+}
+
+.title {
+	font-size: 32px;
+	color: white;
+	font-family: 'Roboto Slab', serif;
+	padding: 5px;
+}
+
+.nav-item {
+	font-size: 14px;
+	color: darkgray;
+	font-family: 'Roboto Slab', serif;
+	padding: 5px;
+}
+
+.nav-item-current {
+	font-size: 14px;
+	color: white;
+	font-family: 'Roboto Slab', serif;
+	padding: 5px;
+}
+
+a {
+	text-decoration: none;
+}
