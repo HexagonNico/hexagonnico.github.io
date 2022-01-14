@@ -38,3 +38,28 @@ a {
 .page-content {
 	padding: 30px;
 }
+
+.projects-header {
+	padding-bottom: 20px;
+}
+
+.project {
+	margin: 10px;
+	padding: 10px;
+	border-radius: 25px;
+	float: left;
+	flex-flow: row;
+	background: #ccc;
+	width: 315px;
+}
+
+.project-image {
+	border-radius: 20px;
+}
+
+.project-text {
+	margin-top: 5px;
+	margin-bottom: 0;
+	display: block;
+	color: black;
+}
