@@ -53,7 +53,6 @@ a:hover {
 	padding: 10px;
 	border-radius: 25px;
 	float: left;
-	flex-flow: row;
 	background: #ccc;
 	width: 315px;
 }
@@ -69,8 +68,16 @@ a:hover {
 	color: black;
 }
 
-.project-page {
-	padding-top: 50px;
-	padding-left: 100px;
-	padding-right: 100px;
+.text-left {
+	padding-right: 5px;
+	width: 55%;
+}
+
+.image-right {
+	width: 45%;
+}
+
+.aligned {
+	display: flex;
+	align-items: center;
 }
