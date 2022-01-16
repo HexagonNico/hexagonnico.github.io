@@ -58,6 +58,7 @@ a:hover {
 }
 
 .project-image {
+	max-width: 315px;
 	border-radius: 20px;
 }
 
