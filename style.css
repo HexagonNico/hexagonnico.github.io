@@ -69,15 +69,32 @@ a:hover {
 }
 
 .text-left {
-	padding-right: 5px;
-	width: 55%;
+	max-width: 700px;
 }
 
 .image-right {
-	width: 45%;
+	padding-left: 50px;
 }
 
 .aligned {
 	display: flex;
-	align-items: center;
+	flex-direction: row;
+}
+
+.image-padding {
+	padding: 10px;
+}
+
+@media (max-width: 800px) {
+	.aligned {
+		flex-direction: column;
+	}
+	.image-right {
+		padding-left: 0;
+	}
+	.image-padding {
+		padding: 0;
+		padding-bottom: 10px;
+		padding-top: 10px;
+	}
 }
