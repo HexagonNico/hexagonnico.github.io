@@ -87,6 +87,11 @@ a:hover {
 	border-radius: 20px;
 }
 
+.video-list {
+	float: left;
+	padding: 10px;
+}
+
 @media (max-width: 800px) {
 	.aligned {
 		flex-direction: column;
