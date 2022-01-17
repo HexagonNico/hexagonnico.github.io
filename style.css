@@ -47,12 +47,16 @@ a:hover {
 	padding-bottom: 20px;
 }
 
-.project {
+.black-text {
 	color: black;
+}
+
+.project {
 	margin: 10px;
 	padding: 10px;
 	border-radius: 25px;
-	float: left;
+	display: inline-block;
+	vertical-align: top;
 	background: #ccc;
 	width: 315px;
 }
@@ -66,7 +70,6 @@ a:hover {
 	margin-top: 5px;
 	margin-bottom: 0;
 	display: block;
-	color: black;
 }
 
 .text-left {
