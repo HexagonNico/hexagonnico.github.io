@@ -2,3 +2,7 @@
 #navbar {
 	transition: top 0.5s;
 }
+
+body {
+	padding-top: 65px;
+}

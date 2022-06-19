@@ -1,0 +1,22 @@
+
+.project-content {
+	display: grid;
+	grid-template-columns: 60% 40%;
+	column-gap: 16px;
+}
+
+.project-content p {
+	text-align: justify;
+}
+
+.project-content img {
+	border: 2px solid black;
+	width: 100%;
+	height: auto;
+}
+
+@media only screen and (max-width: 640px) {
+	.project-content {
+		grid-template-columns: 100%;
+	}
+}
