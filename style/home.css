@@ -36,6 +36,10 @@ div .introduction {
 	margin-top: 16px;
 }
 
+.space-above-2 {
+	margin-top: 32px;
+}
+
 .intro-links {
 	padding-left: 16px;
 }
@@ -51,13 +55,12 @@ div .introduction {
 }
 
 .article {
-	padding-top: 48px;
+	padding-bottom: 32px;
 }
 
 .article div {
 	display: grid;
 	grid-template-columns: 50% 50%;
-	column-gap: 16px;
 }
 
 .article a {
@@ -71,7 +74,7 @@ div .introduction {
 
 .article img {
 	text-align: center;
-	width: 80%;
+	width: 100%;
 }
 
 @media only screen and (max-width: 640px) {
