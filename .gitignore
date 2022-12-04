@@ -1,0 +1,7 @@
+
+# Temporary
+assets/img/
+
+# External editors
+.vscode/
+.fleet/
