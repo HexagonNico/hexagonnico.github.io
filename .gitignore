@@ -1,4 +1,7 @@
-
 # External editors
 .vscode/
 .fleet/
+
+# Directories
+.DS_Store
+.directory
