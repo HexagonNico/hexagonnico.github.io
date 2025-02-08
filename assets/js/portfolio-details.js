@@ -25,16 +25,25 @@ const PROJECTS = {
             "After the game was released, I kept updating it to implement some of the feedback received and provide some content updates."
         ]
     },
-    "ardent-engine": {
-        "title": "Ardent Engine",
+    "lwjre": {
+        "title": "LWJRE",
         "images": [
-            "ardent-engine-1.png"
+            "lwjre-1.png",
+            "lwjre-2.png",
+            "lwjre-3.png",
+            "lwjre-4.png"
         ],
         "information": {
+            "Category": "Software project",
+            "Project date": "November 2022 - March 2024",
+            "Project repository": "https://github.com/HexagonNico/LWJRE-Engine"
         },
-        "descriptionHeader": "A WIP general-purpose engine written in Java",
-        // TODO: Put LWJRE back up and write about that instead
-        "description": ""
+        "descriptionHeader": "A graphics and physics engine written in Java",
+        "description": [
+            "LWJRE is a graphics and physics engine written in Java using the LWJGL library that I have created for my bachelor thesis.",
+            "The plan was to implement a way to simulate the movement of rigid bodies and resolve collisions between them, as well as explaining the architecture of the engine and its systems in my thesis, highlighting its optimizations. The user is also able to create 3D scenes using an editor GUI.",
+            "Despite the project being mostly finished before my before my graduation, there is still room for improvements. I have plans to start working on this project again in the future to create a fully functioning game engine."
+        ]
     },
     "celestial-bodies": {
         "title": "Celestial Bodies",
@@ -136,7 +145,7 @@ const PROJECTS = {
     }
 };
 
-window.onload = (event) => {
+window.onload = () => {
     // Get the project name from the URL params and the project object from PROJECTS
     const urlParams = new URLSearchParams(window.location.search);
     const project = PROJECTS[urlParams.get("project")];
