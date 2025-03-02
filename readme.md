@@ -1,9 +1,11 @@
 
-# Portfolio website
+# My Personal website
 
-This is the repository for my portfolio website.
+This is the repository for my personal website.
 
-Available at [hexagonnico.github.io](https://hexagonnico.github.io).
+Used to contain my resume and portfolio as well as my personal projects.
+
+Available at [hexagonnico.github.io](https://hexagonnico.github.io) and [hexagonnico.codeberg.page](https://hexagonnico.codeberg.page).
 
 ### Bootstrap template
 
