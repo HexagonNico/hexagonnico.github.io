@@ -2,67 +2,78 @@
 const PORTFOLIO = [
     {
         "name": "ancient-mind",
-        "displayName": "Ancient Mind",
+        "title": "Ancient Mind",
         "image": "ancient-mind-1.png"
     },
     {
         "name": "lwjre",
-        "displayName": "LWJRE",
+        "title": "LWJRE",
         "image": "lwjre-1.png"
     },
     {
         "name": "celestial-bodies",
-        "displayName": "Celestial Bodies",
+        "title": "Celestial Bodies",
         "image": "celestial-bodies-1.png"
     },
     {
         "name": "pixel-island",
-        "displayName": "Pixel Island",
+        "title": "Pixel Island",
         "image": "pixel-island-1.png"
     },
     {
         "name": "scalamath",
-        "displayName": "Scalamath",
+        "title": "Scalamath",
         "image": "scalamath-1.png"
     },
     {
         "name": "dungeon-keys",
-        "displayName": "Dungeon Keys",
+        "title": "Dungeon Keys",
         "image": "dungeon-keys-1.png"
     },
     {
         "name": "stickerest",
-        "displayName": "Stickerest",
+        "title": "Stickerest",
         "image": "stickerest-1.png"
     }
 ]
 
-window.onload = () => {
-    // Add each project to the portfolio
-    const portfolioProjects = document.getElementById("portfolio-projects");
-    PORTFOLIO.forEach(project => {
-        // Create portfolio item element
-        const portfolioItem = document.createElement("a");
-        portfolioItem.href = "portfolio-details.html?project=" + project.name;
-        portfolioItem.classList.add("col-lg-4", "col-md-6", "portfolio-item", "isotope-item");
-        // Outer div to contain image and project name
-        const outerDiv = document.createElement("div");
-        outerDiv.classList.add("portfolio-content", "h-100");
-        // Portfolio item image
-        const img = document.createElement("img");
-        img.src = "assets/img/portfolio/" + project.image;
-        img.classList.add("img-fluid");
-        // Inner div
-        const innerDiv = document.createElement("div");
-        innerDiv.classList.add("portfolio-info");
-        // Inner text
-        const p = document.createElement("p");
-        p.innerText = project.displayName;
-        // Add the HTML element to the page
-        innerDiv.appendChild(p);
-        outerDiv.appendChild(img);
-        outerDiv.appendChild(innerDiv);
-        portfolioItem.appendChild(outerDiv);
-        portfolioProjects.appendChild(portfolioItem);
-    });
-}
+// Add each project to the portfolio
+const portfolioProjects = document.getElementById("portfolio-projects");
+PORTFOLIO.forEach(project => {
+    // Create portfolio item element
+    const portfolioItem = document.createElement("div");
+    portfolioItem.classList.add("col-lg-4", "col-md-6", "portfolio-item", "isotope-item");
+    // Create portfolio content element
+    const portfolioContent = document.createElement("div");
+    portfolioContent.classList.add("portfolio-content", "h-100");
+    // Create the image icon
+    const portfolioImage = document.createElement("img");
+    portfolioImage.classList.add("img-fluid");
+    portfolioImage.src = "assets/img/portfolio/" + project.image;
+    // Create the portfolio info element
+    const portfolioInfo = document.createElement("div");
+    portfolioInfo.classList.add("portfolio-info");
+    // Create the title element
+    //const title = document.createElement("h4");
+    //title.innerText = project.title;
+    // Create the description paragraph
+    const description = document.createElement("p");
+    description.innerText = project.title;
+    // Create the portfolio details link
+    const portfolioDetails = document.createElement("a");
+    portfolioDetails.href = "portfolio-details.html?project=" + project.name;
+    portfolioDetails.title = "More details";
+    portfolioDetails.classList.add("details-link");
+    // Create the details icon
+    const linkIcon = document.createElement("i");
+    linkIcon.classList.add("bi", "bi-zoom-in");
+    // Add the HTML to the page
+    portfolioDetails.appendChild(linkIcon);
+    //portfolioInfo.appendChild(title);
+    portfolioInfo.appendChild(description);
+    portfolioInfo.appendChild(portfolioDetails);
+    portfolioContent.appendChild(portfolioImage);
+    portfolioContent.appendChild(portfolioInfo);
+    portfolioItem.appendChild(portfolioContent);
+    portfolioProjects.appendChild(portfolioItem);
+});

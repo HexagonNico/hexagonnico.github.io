@@ -878,7 +878,8 @@ section,
 }
 
 .portfolio .portfolio-content .portfolio-info .details-link {
-  left: 50%;
+/*   left: 50%; */
+  left: calc(50% - 12px);
   font-size: 34px;
   line-height: 0;
 }
