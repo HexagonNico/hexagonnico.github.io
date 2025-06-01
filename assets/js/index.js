@@ -11,6 +11,16 @@ const PORTFOLIO = [
         "image": "lwjre-1.png"
     },
     {
+        "name": "twenty-games-challenge",
+        "title": "Twenty Games Challenge",
+        "image": "twenty-games-challenge-1.png"
+    },
+    {
+        "name": "underground-worlds",
+        "title": "Underground Worlds",
+        "image": "underground-worlds-1.png"
+    },
+    {
         "name": "celestial-bodies",
         "title": "Celestial Bodies",
         "image": "celestial-bodies-1.png"

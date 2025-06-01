@@ -45,6 +45,48 @@ const PROJECTS = {
             "Despite the project being mostly finished before my before my graduation, there is still room for improvements. I have plans to start working on this project again in the future to create a fully functioning game engine."
         ]
     },
+    "twenty-games-challenge": {
+        "title": "Twenty Games Challenge",
+        "images": [
+            "twenty-games-challenge-1.png",
+            "twenty-games-challenge-2.png",
+            "twenty-games-challenge-3.png"
+        ],
+        "information": {
+            "Category": "Games",
+            "Store page": "https://hexagonnico.itch.io/hexagonnicos-twenty-games-challenge",
+            "Source code": "https://codeberg.org/HexagonNico/TwentyGamesChallenge",
+            "Video playlist": "https://www.youtube.com/playlist?list=PLZWQjVZ2JKzfK4tdsoGkuNX7spN_KWsGs"
+        },
+        "descriptionHeader": "Twenty games in one",
+        "description": [
+            "The Twenty Games Challenge consists in recreating twenty popular games that become progressively more complex without any theme or time constraint. " +
+            "Its main purpose is to quickly learn new aspects of game development that one wouldn't otherwise learn by working on a single large project.",
+            "My goal was to put all the twenty games in the same project and reuse some assets or code from the previous games if possible. " +
+            "I also wanted to document the creation of each of the twenty games with a video. " +
+            "As of the time of writing, the first three games have been created."
+        ]
+    },
+    "underground-worlds": {
+        "title": "Underground Worlds",
+        "images": [
+            "underground-worlds-1.png",
+            "underground-worlds-2.png",
+            "underground-worlds-3.png",
+            "underground-worlds-4.png",
+            "underground-worlds-5.png"
+        ],
+        "information": {
+            "Category": "Game mods",
+            "Mod page": "https://modrinth.com/mod/underground-worlds",
+            "Source code": "https://codeberg.org/HexagonNico/UndergroundWorlds"
+        },
+        "descriptionHeader": "A Minecraft Mod for biomes and dungeons",
+        "description": [
+            "Underground Worlds aims at expanding the adventuring side of Minecraft by adding underground biomes and dungeons.",
+            "This game has always been one of my favourites and creating mods for it is a way of using the tools it provides to expand it and add more content."
+        ]
+    },
     "celestial-bodies": {
         "title": "Celestial Bodies",
         "images": [
@@ -150,7 +192,7 @@ window.onload = () => {
     const urlParams = new URLSearchParams(window.location.search);
     const project = PROJECTS[urlParams.get("project")];
     // Set the content of the page if a project with this name exists
-    if(project != undefined) {
+    if (project != undefined) {
         // Set the title of the page
         const pageTitle = document.getElementById("page-title");
         pageTitle.innerHTML = project.title;
@@ -166,7 +208,7 @@ window.onload = () => {
         });
         // Add the project information to the side panel
         const projectInformation = document.getElementById("project-information");
-        for(let key in project.information) {
+        for (let key in project.information) {
             // Use the entry key
             const li = document.createElement("li");
             const strong = document.createElement("strong");
@@ -174,17 +216,23 @@ window.onload = () => {
             li.appendChild(strong);
             li.innerHTML += ": ";
             // Add a hyperlink if the info contains a dot
-            if(project.information[key].includes(".")) {
+            if (project.information[key].includes(".")) {
                 const a = document.createElement("a");
                 a.href = project.information[key];
                 a.target = "_blank";
                 // Display the site name instead of the full url
-                if(project.information[key].includes("steam")) {
+                if (project.information[key].includes("steam")) {
                     a.innerHTML = "Steam";
-                } else if(project.information[key].includes("github")) {
+                } else if (project.information[key].includes("github")) {
                     a.innerHTML = "Github";
-                } else if(project.information[key].includes("itch")) {
+                } else if (project.information[key].includes("itch")) {
                     a.innerHTML = "Itch.io";
+                } else if (project.information[key].includes("codeberg")) {
+                    a.innerHTML = "Codeberg";
+                } else if (project.information[key].includes("modrinth")) {
+                    a.innerHTML = "Modrinth";
+                } else if (project.information[key].includes("youtube")) {
+                    a.innerHTML = "Youtube";
                 } else {
                     a.innerHTML = project.information[key];
                 }
